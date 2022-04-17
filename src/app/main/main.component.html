@@ -1,18 +1,21 @@
 <div class="container">
   <img src="../../assets/images/wave.svg" class="wave-rose" alt="wave rose style">
-  <header class="header-page">
+  <img src="../../assets/images/graphs1.svg" class="graphs1" alt="graphics illustation">
+  <header class="header-page" [class.header-mobile]="isPressedMenu" #header>
     <div class="logo">
       <h1>
         AR SHAKIR
       </h1>
+      <button class="hamburger" (click)="pressMenu()">
+        <img src="../../assets/icons/hamburger.svg" alt="hamburger icon">
+      </button>
     </div>
-
-    <ul class="navigation">
+    <ul class="navigation" [class.navigation-mobile]="isPressedMenu">
       <li>
         <a href="#">Product</a>
       </li>
       <li>
-        <a href="#">Tremplate</a>
+        <a href="#">Template</a>
       </li>
       <li>
         <a href="#">Blog</a>
@@ -21,13 +24,46 @@
         <a href="#">Pricing</a>
       </li>
     </ul>
-    <div class="container-header-buttons">
-      <button class="sign-in">
+    <div class="container-header-buttons" [class.container-buttons-mobile]="isPressedMenu">
+      <button class="sign-in" (click)="pressMenu()">
         Sign In
       </button>
-      <button class="start-free">
+      <button class="start-free" (click)="pressMenu()">
         Start Free
       </button>
     </div>
   </header>
+  <aside class="home" #home>
+    <div class="content-home">
+      <h4>Product Growth Solution in Single Plataform.</h4>
+      <h1>Managing business payments has never been easier</h1>
+      <label>
+        Never at water me might. On formed merits hunted unable merely by mr whence or. Possession the unpleasing
+        simplicity her uncommonly.
+      </label>
+      <div class="content-email-adress">
+        <div>
+          <label>Register using email address</label>
+          <input type="text" placeholder="Ex:test@gmail.com">
+        </div>
+        <button>
+          Submit
+        </button>
+      </div>
+    </div>
+  </aside>
+  <hr>
+  <aside class="container-businesses" #businnessPartness>
+    <h4>Over 32k+ software businesses growing with AR Shakir</h4>
+    <div class="businesses">
+      <img src="../../assets/icons/openZeppelin.svg" alt="openZeppelin icon">
+      <img src="../../assets/icons/oracle.svg" alt="oracle icon">
+      <img src="../../assets/icons/morpheus.svg" alt="morpheus icon">
+      <img src="../../assets/icons/samsung.svg" alt="samsung icon">
+      <img src="../../assets/icons/monday.svg" alt="monday icon">
+      <img src="../../assets/icons/segment.svg" alt="segment icon">
+      <img src="../../assets/icons/protonet.svg" alt="protonet icon">
+    </div>
+  </aside>
+  <hr>
 </div>
