@@ -381,9 +381,9 @@ hr {
 
 .content-email-adress > div label {
   position: absolute;
-  top: -0.5rem;
+  top: -1rem;
   left: 0.5rem;
-  font-size: 0.78rem;
+  font-size: .78rem;
   font-weight: 700;
   color: #757095;
 }
@@ -393,9 +393,9 @@ hr {
   height: 100%;
   border: none;
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #000000;
+  color: #000;
   padding: 0.5rem;
 
   &:focus {
