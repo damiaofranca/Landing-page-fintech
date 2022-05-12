@@ -1,3 +1,16 @@
+<div *ngIf="isOpenModal" class="modal">
+  <div class="modal-content">
+    <h2>Notification</h2>
+    <p>
+      This site is for study purposes only and should not be <br />
+      used in production, any and all content has <br />
+      your credits at the end of the site.
+    </p>
+    <div>
+      <button class="close" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
 <div class="container">
   <img
     src="../../assets/images/wave.svg"
@@ -15,7 +28,7 @@
     [class.add-color-header]="!isInStartPage"
   >
     <div class="logo" [class.add-color-header-logo]="!isInStartPage">
-      <h1>AR SHAKIR</h1>
+      <h1>LOGO</h1>
       <button class="hamburger" (click)="pressMenu()">
         <img src="../../assets/icons/hamburger.svg" alt="hamburger icon" />
       </button>
@@ -41,7 +54,6 @@
     <div
       class="container-header-buttons"
       [class.container-buttons-mobile]="isPressedMenu"
-      [class.add-color-links-buttons]="!isInStartPage"
     >
       <button class="sign-in" (click)="pressMenu()">Sign In</button>
       <button class="start-free" (click)="pressMenu()">Start Free</button>
@@ -55,18 +67,20 @@
         Never at water me might. On formed merits hunted unable merely by mr
         whence or. Possession the unpleasing simplicity her uncommonly.
       </label>
-      <div class="content-email-adress">
-        <div>
-          <label>Register using email address</label>
-          <input type="text" placeholder="Ex:test@gmail.com" />
+      <div class="content-email-info">
+        <div class="content-email-adress">
+          <div>
+            <label>Register using email address</label>
+            <input type="text" placeholder="Ex:test@gmail.com" />
+          </div>
+          <button>Submit</button>
         </div>
-        <button>Submit</button>
       </div>
     </div>
   </aside>
   <hr />
   <aside class="container-businnes" #businnessPartness>
-    <h4>Over 32k+ software businesses growing with AR Shakir</h4>
+    <h4>Over 32k+ software businesses growing with enterprise</h4>
     <div class="businnes">
       <img src="../../assets/icons/openZeppelin.svg" alt="openZeppelin icon" />
       <img src="../../assets/icons/oracle.svg" alt="oracle icon" />
@@ -81,15 +95,20 @@
   <aside class="container-team">
     <div>
       <h3 class="title-small">STOCKIE OPERATION ACROSS THE WORLD</h3>
-      <h4>We have best team and best process</h4>
+      <h4>
+        We have best team <br />
+        and best process
+      </h4>
       <p>
-        Yet bed any for travelling assistance indulgence unpleasing. Not
-        thoughts all exercise blessing. Indulgence way everything joy.
+        Yet bed any for travelling assistance <br />
+        indulgence unpleasing. Not thoughts <br />
+        all exercise blessing. Indulgence <br />
+        way everything joy.
       </p>
       <button class="get-started">Get Started</button>
     </div>
     <img
-      src="../../assets/images/graph-non-linear.svg"
+      src="../../assets/images/graph-animation.png"
       class="graph-non-linear"
       alt="graph non linear"
     />
@@ -234,7 +253,114 @@
     <h5>TESTIMONIALS</h5>
     <H3> Check what our clients are saying </H3>
     <div>
-      <div class="img-testimonials"></div>
+      <div class="img-testimonials">
+        <img [src]="initialTestimonials.image" alt="woman" />
+      </div>
+      <div class="client-say-container">
+        <img src="../../assets/icons/simbol.svg" class="symbol" alt="symbol" />
+        <div class="stars-satisfaction-container">
+          <div *ngFor="let item of countStars(initialTestimonials.stars)">
+            <img src="../../assets/icons/star-red.svg" alt="star" />
+          </div>
+        </div>
+        <h2>
+          {{ initialTestimonials.description }}
+        </h2>
+        <div class="work-on">
+          <h2>
+            {{ initialTestimonials.role }}
+          </h2>
+          <img [src]="initialTestimonials.imgCompany" alt="image of company" />
+        </div>
+      </div>
     </div>
   </aside>
+  <aside class="download-container">
+    <h5>PROJECT MANAGEMENT APP</h5>
+    <h3>DOWNLOAD OUR APP AND START YOUR FREE TRIAL TO GET STARTED TODAY!</h3>
+    <p>End-to-end payments and financial managemnt in a single solution.</p>
+    <div>
+      <button class="playstore-button">
+        <img src="../../assets/icons/apple-logo.svg" alt="apple logo" />
+        <strong> Playstore </strong>
+      </button>
+      <button class="google-play-button">
+        <img src="../../assets/icons/google-play.svg" alt="google-play logo" />
+        <strong> Google play </strong>
+      </button>
+    </div>
+  </aside>
+  <aside class="login-account-container">
+    <div class="container-choose">
+      <h4>WHY CHOOSE US</h4>
+      <h3>
+        Track your crypto <br />
+        portfolio on the <br />
+        best way possible
+      </h3>
+      <p>
+        Mean if he they been hold mr.ls at much do made.<br />
+        Latter person am secure of estate genius at.
+      </p>
+    </div>
+    <div class="container-form">
+      <input type="email" placeholder="Email address" />
+      <input type="password" placeholder="password" />
+      <button>Get started</button>
+    </div>
+  </aside>
+  <aside class="footer-container">
+    <div>
+      <div>
+        <strong> Company </strong>
+        <p>About Us</p>
+        <p>Carrers</p>
+        <p>Blog</p>
+        <p>Pricing</p>
+      </div>
+      <div>
+        <strong> Resources </strong>
+        <p>Templates</p>
+        <p>Tutorials</p>
+        <p>Free resources</p>
+        <p>Contract templates</p>
+      </div>
+      <div>
+        <div>
+          <strong> Join Our NewsLetter </strong>
+          <div>
+            <input type="email" placeholder="Your email address" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="explanation-container">
+          <p>
+            * Will send you weekly updates for your better <br />
+            finance management.
+          </p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="responsabilites">
+    <p>
+      This website is not a real website. It is only a inspiration of project
+      remove from
+      <a
+        href="https://www.figma.com/community/file/1092587981386415687"
+        target="_blank"
+      >
+        figma.</a
+      >
+      <br />
+      Some of the images used are from
+      <a href="https://unsplash.com/" target="_blank">unsplash</a>,
+      <a href="https://storyset.com/people" target="_blank">storyset</a>, and
+      <a href="https://www.playbook.com/s/goh/illustrations" target="_blank"
+        >PlayBook website.</a
+      >
+      <br />
+      It was made for study purposes only.
+    </p>
+  </div>
 </div>
